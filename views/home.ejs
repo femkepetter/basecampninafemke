@@ -1,19 +1,151 @@
-<!-- HEADER -->
-<%- include('partials/header.ejs') -%>
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- VANAF HIER EDITEN -->
-<main class="content">
-    <h1>Homepage</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio necessitatibus nulla dolore libero porro nam
-        dicta
-        excepturi atque in quae modi, exercitationem omnis dolorum, minus beatae rerum similique enim ullam.
-        Quod sint commodi enim minus delectus eligendi praesentium dolores adipisci animi, rem illum aperiam soluta
-        corrupti magni nam nihil illo suscipit non voluptatum laboriosam laborum natus ab. Modi, repellendus aut!
-        Velit quidem fugiat ad accusamus molestiae iusto aut iste nisi tempora, a nihil vero itaque. Molestias
-        officiis
-        maxime sed id accusantium commodi eveniet, harum voluptatum natus reprehenderit deserunt repellat ratione?
-    </p>
-</main>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FOOTER -->
-<%- include('partials/footer.ejs') -%>
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Metamorphous&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap & CSS stylesheet-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <title>Which Witcher Character Are You?</title>
+</head>
+
+<body>
+
+    <!-- CLOUDS -->
+
+    <div class="forest"> </div>
+    <div class="cloud1" style="--i:1"> </div>
+    <div class="cloud2" style="--i:2"></div>
+    <div class="cloud3" style="--i:3"> </div>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h1>Which Witcher Character Are You?</h1>
+                <p>Take our short quiz and find out!</p>
+            </div>
+
+
+            <!-- QUIZ PLACEHOLDER-->
+
+
+            <!-- QUESTION 1-->
+            <div class="col-8 border1 px-0">
+                <div class=" border2  px-3">
+                    <h2>Question 1:</h2>
+                    <p>What color are your eyes?</p>
+
+
+                    <div class="col resultbutton text-center">
+                        <p> Bright green</p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p>Yellow</p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p> Dark brown</p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p>Violet</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUESTION 2-->
+
+            <div class="col-8 border1 px-0">
+                <div class=" border2  px-3">
+                    <h2>Question 2:</h2>
+                    <p>What is one of your flaws?</p>
+
+
+                    <div class="col resultbutton text-center">
+                        <p> I'm impulsive</p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p>I'm struggle with self-doubt </p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p>I have a tendency to go places where I don't belong</p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p> I'm very stubborn</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUESTION 3-->
+
+            <div class="col-8 border1 px-0">
+                <div class=" border2  px-3">
+                    <h2>Question 3:</h2>
+                    <p>What do you dislike?</p>
+
+
+                    <div class="col resultbutton text-center">
+                        <p> Portals </p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p> Not getting what I want </p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p>Shoes that don't fit</p>
+                    </div>
+
+                    <div class="col resultbutton text-center">
+                        <p> Being told what to do</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- RESULT PLACEHOLDER-->
+            <div class="col-8 border1 px-0">
+                <div class=" border2  px-3">
+                    <h2>You are.... Geralt of Rivia!</h2>
+
+                    <img src=" https://i.pinimg.com/736x/5c/db/a0/5cdba0c973e261c20843aceed592056d.jpg" class="portrait"
+                        alt="">
+                    <p>Geralt of Rivia, The White Wolf, Butcher of Blaviken,was a legendary witcher of the School of
+                        the
+                        Wolf active throughout the 13th
+                        century. He loved the sorceress Yennefer, considered the love of his life despite their
+                        tumultuous
+                        relationship, and became Ciri's adoptive father.
+                    </p>
+                </div>
+            </div>
+            <div class="col-8 resultbutton px-0">
+                <h3>That's cool, take me back <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                    </svg> </h3>
+            </div>
+        </div>
+</body>
+
+</html>

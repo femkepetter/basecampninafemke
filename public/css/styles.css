@@ -57,7 +57,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: fill;
-    background-image: url(bgforest1.jpg);
+    background-image: url(/images/bgforest1.jpg);
     background-size: contain;
     mix-blend-mode: overlay;
     filter: sepia(90%), grayscale(50%);
@@ -70,7 +70,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(cloud1.png);
+    background-image: url(/images/cloud1.png);
     mix-blend-mode: overlay;
     opacity: 0.3;
     animation: animate calc(50s* var(--i)) linear infinite;
@@ -93,7 +93,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(cloud2.png);
+    background-image: url(/images/cloud2.png);
     mix-blend-mode: overlay;
     opacity: 0.3;
     animation: animate calc(40s* var(--i)) linear infinite;
@@ -116,7 +116,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(cloud3.png);
+    background-image: url(/images/cloud3.png);
     mix-blend-mode: overlay;
     opacity: 0.3;
     animation: animate calc(50s* var(--i)) linear infinite;
@@ -145,7 +145,7 @@ p {
     border: 1px solid #302723;
     margin: 2px;
     background-color: #0f0e0d;
-    background-image: url(grainy07.png);
+    background-image: url(/images/grainy07.png);
     background-blend-mode: overlay;
     background-size: 100%;
 }

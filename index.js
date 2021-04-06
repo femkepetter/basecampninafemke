@@ -31,9 +31,22 @@ app.set('view engine', 'ejs');
 
 //***********************ROUTES*****************************/
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('home', { 
+        title:"Homepage",
+        });
+    });
+
+app.get('/quiz', (req, res) => {
+    res.render('quiz', { 
+    title:"Quiz",
+    });
 });
 
+app.get('/monsters', (req, res) => {
+    res.render('monsters', { 
+        title:"Monster Library",
+        });
+    });
 
 //***********************SERVER CONNECTIE*****************************/
 app.listen(3000, () => {

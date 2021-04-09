@@ -13,7 +13,7 @@ app.use('/popper', express.static(__dirname + '/node_modules/popper.js/dist/'));
 
 //***********************DATABASE CONNECTIE*****************************/
 //Vergeet niet de databasenaam newDatabase te veranderen naar een andere database
-mongoose.connect('mongodb://localhost:27017/newDatabase', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost:27017/witcherProject', {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
     console.log("MONGO CONNECTION OPEN!")
 })
@@ -22,8 +22,9 @@ mongoose.connect('mongodb://localhost:27017/newDatabase', {useNewUrlParser: true
     console.log(err)
 });
 
-//***********************DATABASE MODELS*****************************/
-const Model = require('./models/data');
+// //***********************DATABASE MODELS*****************************/
+const Question = require('./public/js/questions');
+const Witcher = require('./public/js/witchers');
 
 //***********************VIEWS ROUTE*****************************/
 app.set('views', path.join(__dirname, 'views'));
@@ -36,17 +37,21 @@ app.get('/', (req, res) => {
         });
     });
 
-app.get('/quiz', (req, res) => {
+app.get('/quiz', async (req, res) => {
+    const questions = await Question.find({})
+    const witchers = await Witcher.find({})
     res.render('quiz', { 
-    title:"Quiz",
+        title:"Quiz", questions, witchers
     });
+    console.log(questions);
+    console.log(witchers);
 });
 
 app.get('/monsters', (req, res) => {
     res.render('monsters', { 
-        title:"Monster Library",
-        });
+    title:"Monster Library",
     });
+});
 
 //***********************SERVER CONNECTIE*****************************/
 app.listen(3000, () => {

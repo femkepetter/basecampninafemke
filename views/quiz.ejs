@@ -13,78 +13,46 @@
 
         <div class="col-8 border1 px-0">
             <div class=" border2  px-3">
-                <% let index = 0; %>
-                <h2>Question <%= questions.index %></h2>
+                <h2>Question <%= question + 1 %></h2>
 
-                <p><%= questions[index].question %></p>
+                <p><%= questions[question].question %></p>
 
-                <div>
-                    <button><%= questions[index].answer1 %></button>
-                </div>
+                <form action="http://localhost:3000/quiz/<%= next_question %>" method="POST">
+                    <div>
+                        <input type="radio" name="answer" value="<%= questions[question].answer1Total %>">
+                        <span><%= questions[question].answer1 %></span>
+                    </div>
 
-                <div>
-                    <button><%= questions[index].answer2 %></button>
-                </div>
+                    <div>
+                        <input type="radio" name="answer" value="<%= questions[question].answer2Total %>">
+                        <span><%= questions[question].answer2 %></span>
+                    </div>
 
-                <div>
-                    <button><%= questions[index].answer3 %></button>
-                </div>
+                    <div>
+                        <input type="radio" name="answer" value="<%= questions[question].answer3Total %>">
+                        <span><%= questions[question].answer3 %></span>
+                    </div>
 
-                <div>
-                    <button><%= questions[index].answer4 %></button>
-                </div>
+                    <div>
+                        <input type="radio" name="answer" value="<%= questions[question].answer4Total %>">
+                        <span><%= questions[question].answer4 %></span>
+                    </div>
 
-                <div>
-                    <button><%= questions[index].answer5 %></button>
-                </div>
-                <br>
-                <button id="nextQuestion">Next</button>
+                    <div>
+                        <input type="radio" name="answer" value="<%= questions[question].answer5Total %>">
+                        <span><%= questions[question].answer5 %></span>
+                    </div>
+
+                    <br>
+                    <input type="hidden" name="questionIndex" value="<%= question %>">
+                    <input type="hidden" name="result" value="<%= total %>">
+                    <% if (next_question === 0){ %>
+                    <input type="submit" name="finish" value="Finish">
+                    <% } else { %>
+                    <input type="submit" name="next" value="Next">
+                    <% }; %>
+                </form>
             </div>
-        </div>
-
-        <!-- QUESTION 3-->
-
-        <div class="col-8 border1 px-0">
-            <div class=" border2  px-3">
-                <h2>Question 3:</h2>
-                <p>What do you dislike?</p>
-
-
-                <div class="col resultbutton text-center">
-                    <p> Portals </p>
-                </div>
-
-                <div class="col resultbutton text-center">
-                    <p> Not getting what I want </p>
-                </div>
-
-                <div class="col resultbutton text-center">
-                    <p>Shoes that don't fit</p>
-                </div>
-
-                <div class="col resultbutton text-center">
-                    <p> Being told what to do</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- RESULT PLACEHOLDER-->
-        <div class="col-8 border1 px-0">
-            <div class=" border2  px-3">
-                <h2>You are....<%= witchers[0].name %>!</h2>
-
-                <img src=" https://i.pinimg.com/736x/5c/db/a0/5cdba0c973e261c20843aceed592056d.jpg" class="portrait"
-                    alt="">
-                <p><%= witchers[0].description %>
-                </p>
-            </div>
-        </div>
-        <div class="col-8 resultbutton px-0">
-            <h3>That's cool, take me back <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                </svg> </h3>
         </div>
     </div>
 </div>

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/witcherProject', {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
-    console.log("MONGO CONNECTION OPEN!")
+    console.log("MONGO CONNECTION WITH QUESTIONS OPEN!")
 })
 .catch(err => {
     console.log("MONGO CONNECTION ERROR!")
@@ -108,19 +108,19 @@ const questionData = [
 ];
 
 //COLT ZIJN CODE
-// Question.insertMany(questionData)
-//     .then(res => {
-//         console.log(res)
-//     })
-//     .catch(e => {
-//         console.log(e)
-//     });
+Question.insertMany(questionData)
+    .then(res => {
+        console.log("QuestionData is inserted!")
+    })
+    .catch(e => {
+        console.log(e)
+    });
 
     //TOBY ZIJN CODE
-questionData.forEach(q => {
-     let addQuestion = new Question(q);
-     addQuestion.save();
- });
+// questionData.forEach(q => {
+//     let addQuestion = new Question(q);
+//     addQuestion.save();
+// });
 
 //Haal dubbele data eruit - answer3Total werkt als een filter
 Question.find({ answer3Total: { $eq: 0 } }, function(err, docs) {
@@ -133,4 +133,4 @@ Question.find({ answer3Total: { $eq: 0 } }, function(err, docs) {
 
 
 
-console.log('This is the question seeder!');
+// console.log('This is the question seeder!');

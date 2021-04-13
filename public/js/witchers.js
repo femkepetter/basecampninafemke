@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/witcherProject', {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
-    console.log("MONGO CONNECTION OPEN!")
+    console.log("MONGO CONNECTION WITH WITCHERS OPEN!")
 })
 .catch(err => {
     console.log("MONGO CONNECTION ERROR!")
@@ -56,7 +56,7 @@ const witcherData = [
 //COLT ZIJN CODE
 Witcher.insertMany(witcherData)
     .then(res => {
-        console.log(res)
+        console.log("WitcherData is inserted!")
     })
     .catch(e => {
         console.log(e)
@@ -77,4 +77,4 @@ Witcher.find({ $and: [ { min: { $gte: -12 } }, { max: { $lte: 12 } } ] }, functi
    }
 });
 
-console.log('This is the Witcher seeder!');
+// console.log('This is the Witcher seeder!');

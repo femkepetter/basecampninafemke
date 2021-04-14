@@ -1,0 +1,81 @@
+html {
+    margin: 0;
+    height: 100%;
+}
+
+#lijf {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(180deg, rgb(24, 22, 21) 0%, #0f0f0e 100%);
+    background-attachment: fixed;
+    color: #3b2e26;
+    font-family: 'Metamorphous', cursive;
+}
+
+
+h1 {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.5);
+}
+
+h2 {
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #3b2e26;
+    border-image: linear-gradient(90deg, rgba(60, 74, 83, .00), rgba(59, 46, 38, 0.90), rgba(60, 74, 83, .00)) 1;
+    text-align: center;
+    text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.5);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h3 {
+    text-align: center;
+    text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.5);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.paper {
+    background-image: url(/images/paper6.png);
+    background-size: 100% 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 50px;
+    filter: grayscale(0.4);
+}
+
+.paper2 {
+    margin: 50px;
+}
+
+.portrait {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    mix-blend-mode: hard-light;
+    filter: contrast(150%);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 20px;
+}

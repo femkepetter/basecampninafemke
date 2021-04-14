@@ -1,33 +1,76 @@
-<!-- HEADER -->
-<%- include('partials/header.ejs') -%>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-9">
-            <h1>Homepage</h1>
-            <p>Welcome!</p>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Metamorphous&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap, Animate & CSS stylesheet-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/animate.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
 
-        <!-- QUIZ PLACEHOLDER-->
 
+    <title>Which Witcher Character Are You?</title>
 
-        <!-- QUESTION 1-->
-        <div class="col-8 border1 px-0">
-            <div class=" border2  px-3">
-                <h2>Hello!</h2>
-                <p>Welcome to our Witcher page.</p>
-            </div>
-        </div>
+</head>
 
-        <div class="col-8 resultbutton px-0">
-            <h3>That's cool, take me back <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                </svg> </h3>
-        </div>
+<body id="lijf">
+
+    <!-- BACKGROUND-->
+
+    <div id="forest"> </div>
+    <div id="cloud1" style="--i:1"> </div>
+    <div id="cloud2" style="--i:2"></div>
+    <div id="cloud3" style="--i:3"> </div>
+
+    <div class="container">
+        <div class="banner animate__animated animate__fadeInDownBig"></div>
     </div>
-</div>
-<!-- FOOTER -->
-<%- include('partials/footer.ejs') -%>
+    </div>
+
+    <div class=" container">
+
+        <div class="row justify-content-center ">
+            <div class="col-6">
+
+                <h1 class="hone animate__animated animate__fadeIn animate__delay-2s animate__slow">The Witcher</h1>
+
+
+                <div class="align-content-center"> <img src="images/logo.png"
+                        class="logo animate__animated animate__fadeIn animate__delay-1s animate__slower" alt=""></div>
+
+
+                <div
+                    class="col-12 align-self-center button text-center animate__animated animate__fadeIn animate__delay-3s animate__slow">
+                    <a href="quiz" class="quiz">
+                        <div class="">
+                            <p>Quiz</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div
+                    class="col-12 align-self-center button text-center animate__animated animate__fadeIn animate__delay-3s animate__slow">
+                    <a href="monsters" class="monsters">
+                        <p>Monster Manual</p>
+                    </a>
+                </div>
+            </div>
+
+            </script>
+            <script src="js/app.js"></script>
+
+</html>

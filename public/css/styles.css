@@ -1,17 +1,29 @@
 html {
     margin: 0;
+    height: 100%;
 }
 
-body {
+#lijf {
     height: 100%;
     margin: 0px;
     padding: 0px;
     background: linear-gradient(180deg, rgb(24, 22, 21) 0%, #0f0f0e 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
     color: #b8b8b8;
     font-family: 'Metamorphous', cursive;
 }
 
-h1 {
+a {
+    color: #b8b8b8;
+}
+
+a:hover {
+    color: #b8b8b8;
+}
+
+.hone {
     padding-top: 30px;
     padding-bottom: 5px;
     border-bottom-style: solid;
@@ -22,7 +34,7 @@ h1 {
     text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.5);
 }
 
-h2 {
+.htwo {
     padding-bottom: 5px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -50,7 +62,7 @@ p {
 
 /*cloud and forest====*/
 
-.forest {
+#forest {
     position: fixed;
     top: 0;
     left: 0;
@@ -58,13 +70,16 @@ p {
     height: 100%;
     object-fit: fill;
     background-image: url(/images/bgforest1.jpg);
-    background-size: contain;
+    background-size: auto;
+    background-position: center;
     mix-blend-mode: overlay;
     filter: sepia(90%), grayscale(50%);
     opacity: 0.1;
+
+
 }
 
-.cloud1 {
+#cloud1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -87,7 +102,7 @@ p {
     }
 }
 
-.cloud2 {
+#cloud2 {
     position: fixed;
     top: 0;
     left: 0;
@@ -110,7 +125,7 @@ p {
     }
 }
 
-.cloud3 {
+#cloud3 {
     position: fixed;
     top: 0;
     left: 0;
@@ -121,6 +136,8 @@ p {
     opacity: 0.3;
     animation: animate calc(50s* var(--i)) linear infinite;
 }
+
+
 
 @keyframes animate {
 
@@ -133,8 +150,28 @@ p {
     }
 }
 
+.banner {
+    border-left: 600px solid rgb(0, 0, 0, 0.3);
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    top: 0;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    filter: invert(0.7);
+
+}
 
 /*cloud & forest====*/
+
+
 
 .border1 {
     border: 1px solid #302723;
@@ -150,15 +187,31 @@ p {
     background-size: 100%;
 }
 
+.button {
+    border: 1px solid #302723;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    border: 1px solid #47372e;
+    border-left: 10px solid #47372e;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
 .resultbutton {
-    border: 1px solid #29201b;
+    border: 1px solid #302723;
     padding-top: 10px;
     margin-bottom: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .resultbutton:hover {
-    border: 1px solid #524137;
+    border: 1px solid #47372e;
+    border-left: 10px solid #47372e;
     padding-top: 10px;
     margin-bottom: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);

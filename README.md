@@ -9,4 +9,5 @@ This is everything WITHOUT the node modules. Install these modules:
 5. bootstrap
 6. jquery
 7. @popperjs/core
-8. and dependencies (with npm install)
+8. animate.css
+9. and dependencies (with npm install)

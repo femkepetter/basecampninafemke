@@ -46,11 +46,13 @@
                     <br>
                     <input type="hidden" name="questionIndex" value="<%= question %>">
                     <input type="hidden" name="result" value="<%= total %>">
+
                     <% if (next_question === 0){ %>
-                    <input type="submit" name="finish" value="Finish">
+                    <input type="submit" name="finish" value="Finish" id="submit">
                     <% } else { %>
-                    <input type="submit" name="next" value="Next">
+                    <input type="submit" name="next" value="Next" id="submit">
                     <% }; %>
+
                 </form>
             </div>
         </div>

@@ -28,99 +28,99 @@ module.exports = Question;
 
 const questionData = [ 
     {
-        question: 'What is one of your flaws?',
-        answer1: 'I am impulsive',
+        question: 'Do you think about decisions or make them based on your feelings?',
+        answer1: 'I am a thinker, but I do not think about things for too long.',
         answer1Total: -2,
-        answer2: 'I struggle with self-doubt',
+        answer2: 'I balance between thinking and feeling.',
         answer2Total: -1,
-        answer3: 'I have a tendency to go places where I do not belong',
+        answer3: 'I think more when I have the time but make fast decisions based on feelings.',
         answer3Total: 0,
-        answer4: 'I am very stubborn',
+        answer4: 'I am more of a thinker. I do not want to let my feelings influence my decisions.',
         answer4Total: 1,
-        answer5: 'I do not know when to shut up',
+        answer5: 'Feelings! I do not really think about my decisions.',
         answer5Total: 2,
     },
     {
-        question: 'What do you dislike?',
-        answer1: 'Portals',
+        question: 'Do you like to be alone, or are you a people-person?',
+        answer1: 'I do not mind having people around me if I do not have to talk to them.',
         answer1Total: -2,
-        answer2: 'Not getting what I want',
+        answer2: 'I really like to be alone.',
         answer2Total: -1,
-        answer3: 'Shoes that do not fit',
+        answer3: 'I only like to be around people that I know very well.',
         answer3Total: 0,
-        answer4: 'Being told what to do',
+        answer4: 'I enjoy hanging out with people a lot! But not all the time.',
         answer4Total: 1,
-        answer5: 'Monsters',
+        answer5: 'I hate being alone and I want to have people around me as much as I can!',
         answer5Total: 2,
     },
     {
-        question: 'What is your greatest skill?',
-        answer1: 'Fighting',
-        answer1Total: -2,
-        answer2: 'Magic',
-        answer2Total: -1,
-        answer3: 'Screaming',
+        question: 'Are you talkative?',
+        answer1: 'No, I talk as little as possible.',
+        answer1Total: -4,
+        answer2: 'Not really, I only talk if it is necessary.',
+        answer2Total: -2,
+        answer3: 'I can be talkative with people I know, but I do not like to talk with strangers.',
         answer3Total: 0,
-        answer4: 'Singing',
-        answer4Total: 1,
-        answer5: 'Walking long distances',
-        answer5Total: 2,
+        answer4: 'I am talkative. I do not mind if they are strangers or people I know.',
+        answer4Total: 2,
+        answer5: 'I never shut up! I talk as much as I can. I cannot help it.',
+        answer5Total: 4,
     },
     {
-        question: 'When you have free time, what do you like to do?',
-        answer1: 'Going to a brothel',
+        question:  'Which of these answers describe you the best?',
+        answer1: 'I am very loyal.',
         answer1Total: -2,
-        answer2: 'Playing boardgames',
+        answer2: 'I pay attention to details. I notice things a lot faster than the average person.',
         answer2Total: -1,
-        answer3: 'Enchanting goodlooking males',
+        answer3: 'I am brave and determined.',
         answer3Total: 0,
-        answer4: 'Making music',
+        answer4: 'People would say I am intelligent.',
         answer4Total: 1,
-        answer5: 'Eating and pooping',
+        answer5: 'People think I have good humor and I am very friendly.',
         answer5Total: 2,
         },
         {
-        question: 'What do you do when you are attacked?',
-        answer1: 'FIGHT!',
+        question: 'Choose the flaw you recognize most in yourself.',
+        answer1: 'I am very stubborn and like to go my own way.',
         answer1Total: -2,
-        answer2: 'Put a spell on them!',
+        answer2: 'People say I can be cynical and crude.',
         answer2Total: -1,
-        answer3: 'Scream!!!',
+        answer3: 'I can be a little bit naive.',
         answer3Total: 0,
-        answer4: 'I freeze and piss my pants',
+        answer4: 'I crave respect and adoration.',
         answer4Total: 1,
-        answer5: 'Run away',
+        answer5: 'I can be too flirtatious, which can get me into trouble.',
         answer5Total: 2,
         },
         {
-        question: 'How much do you like to sleep?',
-        answer1: 'As little as possible',
-        answer1Total: -2,
-        answer2: 'A few hours maybe',
-        answer2Total: -1,
-        answer3: 'Just a normal 8 hours',
+        question: 'What do you like to do in your free time?',
+        answer1: 'I like to just hang around, and do nothing.',
+        answer1Total: -4,
+        answer2: 'Drinking, preferably in a pub.',
+        answer2Total: -2,
+        answer3: 'Playing games!',
         answer3Total: 0,
-        answer4: 'As long as I possibly can',
-        answer4Total: 1,
-        answer5: 'I take a lot of naps during the day',
-        answer5Total: 2,
+        answer4: 'I love to be creative. Creating things that are almost... magical.',
+        answer4Total: 2,
+        answer5: 'Making music, or listening to music!',
+        answer5Total: 4,
         },
 ];
 
 //COLT ZIJN CODE
-Question.insertMany(questionData)
-    .then(res => {
-        console.log("QuestionData is inserted!")
-    })
-    .catch(e => {
-        console.log(e)
-    });
+// Question.insertMany(questionData)
+//     .then(res => {
+//         console.log("QuestionData is inserted!")
+//     })
+//     .catch(e => {
+//         console.log(e)
+//     });
 
     //TOBY ZIJN CODE
-// questionData.forEach(q => {
-//     let addQuestion = new Question(q);
-//     addQuestion.save();
-// });
+questionData.forEach(q => {
+    let addQuestion = new Question(q);
+    addQuestion.save();
+});
 
 //Haal dubbele data eruit - answer3Total werkt als een filter
 Question.find({ answer3Total: { $eq: 0 } }, function(err, docs) {

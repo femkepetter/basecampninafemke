@@ -1,4 +1,4 @@
-//***********************TEST IF JS IS LINKED****************************/
+// //***********************TEST IF JS IS LINKED****************************/
 // alert("Hi there!");
 
 $(".quiz, .monsters").click(function (e) {
@@ -18,4 +18,11 @@ $(".quiz, .monsters").click(function (e) {
     setTimeout(function (url) {
         window.location = url
     }, 1000, this.href);
+});
+
+$('#submit').click(function(){
+    if (!$("input[name='answer']:checked").val()) {
+       alert('Nothing is checked!');
+        return false;
+    }
 });

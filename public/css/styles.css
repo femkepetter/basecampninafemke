@@ -16,14 +16,23 @@ html {
 }
 
 a {
-    color: #b8b8b8;
+    color: #b8b8b8 !important;
 }
 
 a:hover {
+    color: #b8b8b8 !important;
+}
+
+.link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
     color: #b8b8b8;
 }
 
 .hone {
+    font-size: 37px;
     padding-top: 30px;
     padding-bottom: 5px;
     border-bottom-style: solid;
@@ -32,6 +41,7 @@ a:hover {
     border-image: linear-gradient(90deg, rgba(60, 74, 83, .00), rgba(59, 46, 38, 0.90), rgba(60, 74, 83, .00)) 1;
     text-align: center;
     text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.5);
+    margin-bottom: 30px;
 }
 
 .htwo {
@@ -150,6 +160,8 @@ p {
     }
 }
 
+/*cloud & forest====*/
+
 .banner {
     border-left: 600px solid rgb(0, 0, 0, 0.3);
     height: 100%;
@@ -169,13 +181,10 @@ p {
 
 }
 
-/*cloud & forest====*/
-
-
 
 .border1 {
     border: 1px solid #302723;
-    margin-bottom: 20px;
+    margin-bottom: 200px;
 }
 
 .border2 {
@@ -202,21 +211,82 @@ p {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
-.resultbutton {
+/*  ======QUIZ PART======  */
+[type='radio'] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+
+.quizbutton {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
     border: 1px solid #302723;
     padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
-.resultbutton:hover {
+.quizbutton:hover {
     border: 1px solid #47372e;
     border-left: 10px solid #47372e;
-    padding-top: 10px;
-    margin-bottom: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.5);
 }
+
+.quizbutton:active {
+    border: 1px solid #2e2723;
+    border-left: 10px solid #2e2723;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #777777;
+    text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.1);
+}
+
+.active {
+    border: 1px solid #47372e;
+    border-left: 10px solid #47372e;
+    text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.5);
+}
+
+.submitbutton {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #b8b8b8;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 15px;
+    height: 60px;
+    margin-bottom: 20px;
+    border: 1px solid #302723;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(34, 29, 29, 0);
+}
+
+.submitbutton:hover {
+    border: 1px solid #47372e;
+    border-left: 10px solid #47372e;
+    text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.5);
+    background-color: rgba(39, 32, 32, 0.637);
+}
+
+.submitbutton:active {
+    border: 1px solid #2e2723;
+    border-left: 10px solid #2e2723;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #777777;
+    text-shadow: 0px 0px 20px rgba(252, 251, 208, 0.1);
+}
+
+
+
+
+
+/*  ======RESULT PART======  */
 
 .portrait {
     border: 1px solid #3b2e26;

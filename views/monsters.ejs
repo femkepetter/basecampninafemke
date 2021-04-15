@@ -28,12 +28,17 @@
 
 <body id="lijf">
 
+    <div id="forest"> </div>
+    <div id="cloud1" style="--i:1"> </div>
+    <div id="cloud2" style="--i:2"></div>
+    <div id="cloud3" style="--i:3"> </div>
+
     <!-- NAVBAR-->
     <%- include('partials/header.ejs') -%>
 
 
-    <div class="container">
-        <div class="row justify-content-center ">
+    <div class="container animate__animated animate__fadeIn">
+        <div class="row justify-content-center headline">
             <div class="col-10 px-0 paper">
                 <div class=" paper2  px-3">
                     <h1>Sylvan</h1>
@@ -174,11 +179,6 @@
             </div>
         </div>
     </div>
-
-    <!-- FOOTER -->
-    <%- include('partials/footer.ejs') -%>
-
-
 
     <!--Scroll Reveal Script-->
     <script>

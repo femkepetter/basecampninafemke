@@ -115,7 +115,7 @@ app.post('/quiz/:question', async (req, res) => {
 
 
 app.get('/result/:name', async (req, res) => {
-    const witchers = await Witcher.find({})
+    const witchers = await Witcher.find({});
     let { name } = req.params;
     let { image } = req.params;
     let witcherIndex = parseInt(name);
@@ -141,7 +141,7 @@ app.get('/result/:name', async (req, res) => {
 
 app.get('/monsters', (req, res) => {
     res.render('monsters', { 
-    title:"Monster Library",
+    title:"Monster Manual",
     });
 });
 
@@ -150,6 +150,13 @@ app.get('/about', (req, res) => {
     title:"About Us",
     });
 });
+
+app.get('/monsters-filter', (req, res) => {
+    res.render('monsters-filter', { 
+    title:"Monster Manual",
+    });
+});
+
 
 //***********************SERVER CONNECTIE*****************************/
 app.listen(3000, () => {

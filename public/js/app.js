@@ -1,5 +1,6 @@
-//***********************TEST IF JS IS LINKED****************************/
+// //***********************TEST IF JS IS LINKED****************************/
 // alert("Hi there!");
+
 $(document).ready(function () {
     $(".quiz, .monsters, .about").click(function (e) {
 
@@ -19,17 +20,26 @@ $(document).ready(function () {
             window.location = url
         }, 1000, this.href);
     });
+});
 
-
-    $(".quizbutton").on("click", function () {
-        $(".quizbutton").removeClass("active");
-        $(this).addClass("active");
-    })
-
-    $('#submit').click(function () {
-        if (!$("input[name='answer']:checked").val()) {
-            alert('Nothing is checked!');
-            return false;
-        }
-    })
+$(".quizbutton").on("click", function () {
+    $(".quizbutton").removeClass("active");
+    $(this).addClass("active");
 })
+
+$('#submit').click(function(){
+    if (!$("input[name='answer']:checked").val()) {
+       alert('Nothing is checked!');
+        return false;
+    }
+});
+
+var divList = $(".listing-item");
+
+function sortName(){
+divList.sort(function(a, b){ return $(a).data("name")-$(b).data("name")});    
+$("#list").html(divList);}
+
+function sortUgly(){
+divList.sort(function(a, b){ return $(a).data("ugly")-$(b).data("ugly")});    
+$("#list").html(divList);}

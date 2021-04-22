@@ -1,4 +1,4 @@
-# basecampninafemke
+# Basecamp Project
 CodeGorilla Basecamp project made by Nina and Femke
 
 This is everything WITHOUT the node modules. Install these modules:

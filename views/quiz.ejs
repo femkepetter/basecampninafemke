@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Metamorphous&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap, Animate & CSS stylesheet-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/animate.min.css" />
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+
+
+    <title>Which Witcher Character Are You?</title>
+
+</head>
+
+<body id="lijf">
+
+    <!-- BACKGROUND-->
+
+    <div id="forest"> </div>
+    <div id="cloud1" style="--i:1"> </div>
+    <div id="cloud2" style="--i:2"></div>
+    <div id="cloud3" style="--i:3"> </div>
+
+    <%- include('partials/header.ejs') -%>
+
+
+    <div class="container animate__animated animate__fadeIn">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h1 class="hone">Which Witcher Character Are You?</h1>
+
+
+                <p>Take our short quiz and find out!</p>
+
+
+
+            </div>
+
+            <!-- QUESTION-->
+
+            <div class="col-8 border1 px-0">
+                <div class=" border2  px-3">
+                    <h2 class="htwo">Question <%= question + 1 %></h2>
+
+                    <p><%= questions[question].question %></p>
+
+                    <form action="http://localhost:3000/quiz/<%= next_question %>" method="POST">
+                        <div class="quizbutton">
+                            <label>
+                                <input type="radio" name="answer" value="<%= questions[question].answer1Total %>">
+                                <span>
+                                    <%= questions[question].answer1 %>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="quizbutton">
+                            <label>
+                                <input type="radio" name="answer" value="<%= questions[question].answer2Total %>">
+                                <span><%= questions[question].answer2 %></span>
+                            </label>
+                        </div>
+
+                        <div class="quizbutton">
+                            <label>
+                                <input type="radio" name="answer" value="<%= questions[question].answer3Total %>">
+                                <span><%= questions[question].answer3 %></span>
+                            </label>
+                        </div>
+
+                        <div class="quizbutton">
+                            <label>
+                                <input type="radio" name="answer" value="<%= questions[question].answer4Total %>">
+                                <span><%= questions[question].answer4 %></span>
+                            </label>
+                        </div>
+
+                        <div class="quizbutton">
+                            <label>
+                                <input type="radio" name="answer" value="<%= questions[question].answer5Total %>">
+                                <span><%= questions[question].answer5 %></span>
+                            </label>
+                        </div>
+
+                        <input type="hidden" name="questionIndex" value="<%= question %>">
+                        <input type="hidden" name="result" value="<%= total %>">
+                        <% if (next_question === 0){ %>
+                        <input type="submit" class="submitbutton" name="finish" value="FINISH »" id="submit">
+                        <% } else { %>
+                        <input type="submit" class="submitbutton" name="next" value="NEXT »" id="submit">
+                        <% }; %>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="/js/app.js"></script>
+
+</html>

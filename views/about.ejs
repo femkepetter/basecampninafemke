@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Metamorphous&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap, Animate & CSS stylesheet-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/animate.min.css" />
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+
+
+    <title>About us!</title>
+
+</head>
+
+<body id="lijf">
+
+    <!-- BACKGROUND-->
+
+    <div id="forest"> </div>
+    <div id="cloud1" style="--i:1"> </div>
+    <div id="cloud2" style="--i:2"></div>
+    <div id="cloud3" style="--i:3"> </div>
+
+    <!-- BACKGROUND-->
+
+    <!-- NAVBAR-->
+    <%- include('partials/header.ejs') -%>
+    <!-- NAVBAR-->
+
+    <div class="container animate__animated animate__fadeIn">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h1 class="hone">About Us</h1>
+            </div>
+
+            <div class="col-8 border1 px-0">
+                <div class=" border2  px-3">
+                    <h2 class="htwo"> Femke Petter </h2>
+
+                    <img src="images/femke.jpg" class="portrait" alt="">
+                    <p> Hi, I'm Femke and I did the back-end part of this website!
+                        <br>
+                        <br>
+                        Almost immediately we knew that we wanted to make a Witcher-themed project. We both love the
+                        videogames and the Netflix serie of The Witcher. My guilty pleasure is doing quizzes on the
+                        internet, so I had the idea of making a quiz. Because Nina very quickly knew what she wanted it
+                        to look like and I right away started thinking how it should work, dividing front-end and
+                        back-end was an easy choice.
+                        <br>
+                        <br>
+                        My biggest struggle was getting started with the quiz. I wanted to make steps that were too big,
+                        and got stuck pretty quickly. With some coaching I learned how to think in smaller steps and I
+                        managed to finish writing the last pieces of code without any help &lpar;well, with a bit of
+                        help
+                        from Stack Overflow&rpar;.
+                    </p>
+                    <div class=button>
+                        <a href="https://www.linkedin.com/in/femke-petter/" target="_blank">
+                            <p> Find me on LinkedIn! <p>
+                        </a>
+                    </div>
+
+
+                    <h2 class="htwo"> Nina Aurora </h2>
+
+                    <img src="images/nina.jpeg" class="portrait" alt="">
+                    <p> Hi, I'm Nina and I did the front-end part of this website!
+                        <br>
+                        <br>
+                        I mainly drew inspiration from the Witcher 3 videogame for the design.
+                        The landing page is based on the start screen, the monster manual was based on the quest boards
+                        you encounter ingame,
+                        and the rest was just based on the general UI. Even the background is something similar to the
+                        effect they use in the UI background.
+                        <br>
+                        <br>
+                        In the beginning I really struggled with trying to find the right look, and not having it look
+                        too
+                        dated, but I think I mangaged to pull it off an create something that is a nice hybrid of the
+                        videogame
+                        and what a modern day fansite could look like.
+                    </p>
+                    <div class=button>
+                        <a href="https://www.linkedin.com/in/nina-aurora-781754a0/" target="_blank">
+                            <p> Find me on LinkedIn! <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

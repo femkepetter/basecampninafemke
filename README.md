@@ -1,6 +1,6 @@
 # The Witcher quiz
 ## About
-CodeGorilla Basecamp project made by Nina Aurora and Femke Petter. This was our first groupproject and we had a lot of fun making it. Nina Aurora did the front-end of this project and Femke Petter the back-end code. 
+CodeGorilla Basecamp project made by Nina Aurora and Femke Petter. This was our first group-project and we had a lot of fun making it. Nina Aurora did the front-end of this project and Femke Petter the back-end code. 
 
 It has a few things that could be made a little bit better/smoother, and also the coding itself could be a bit more neat, but we decided to share the project as it is. That way our learning curve during the bootcamp is much more clear.
 

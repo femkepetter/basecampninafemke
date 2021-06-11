@@ -16,4 +16,4 @@ To seed your MongoDB database:
 1. node public/js/witchers.js
 2. node public/js/questions.js
 
-Start the server with nodemon, go to localhost:3000 and have fun!
+Start the server (node index.js), go to localhost:3000 and have fun!
